@@ -23,7 +23,7 @@ The term *memorized secret* was chosen as a single term encompassing passwords, 
 
 One of the significant changes in SP 800-63B is a rethinking of the role of memorized secrets and minimization of their burden on subscribers. In accordance with Executive Order 13681 [EO 13681], transactions involving any significant risk, including any which involve the release of personal information, require multi-factor authentication. As a result, memorized secrets alone will be used only when a relatively low level of security is required.
 
-Research [find relevant Herley paper] has shown that there is a significant gap between the requirement for memorized secrets that must protect against an offline attack as compared with those that only protect against throttled online attacks. For memorized secrets to be considered secure against current offline attacks, a considerably higher minimum length would be required. Even so, there is no assurance that subscribers would pick memorized secrets that don't lend themselves to automated guessing attacks. Accordingly, a two-pronged approach was adopted:
+Research [[1]](#ref1) has shown that there is a significant gap between the requirement for memorized secrets that must protect against an offline attack as compared with those that only protect against throttled online attacks. For memorized secrets to be considered secure against current offline attacks, a considerably higher minimum length would be required. Even so, there is no assurance that subscribers would pick memorized secrets that don't lend themselves to automated guessing attacks. Accordingly, a two-pronged approach was adopted:
 * Set minimum memorized secret requirements to protect against online attacks only, accept the risk of offline attacks, and throttle online attempts.
 * Require verifiers to implement secure hashing of memorized secrets, including iterated hashing with a salt, and recommend hashing with a secret value as well.
 
@@ -321,3 +321,8 @@ At present, the use of PSTN (SMS and voice) to deliver out-of-band secrets is re
 * The demonstrated ability of attackers to obtain reassignment of telephone numbers used for authentication to new devices they control
 * Weaknesses in SS7 security that provide attackers with the opportunity to intercept out-of-band secrets sent via text messages
 * Ability in many cases for subscribers or attackers to forward these notifications to a new device, breaking the ability to determine possession of a specific device
+
+-----
+
+<a name="ref1"></a>[1] Florêncio, Dinei, Cormac Herley, and Paul C. van Oorschot. “An Administrator’s Guide to Internet Password Research.” Usenix LISA, November 2014. http://research.microsoft.com/apps/pubs/default.aspx?id=227130.
+
